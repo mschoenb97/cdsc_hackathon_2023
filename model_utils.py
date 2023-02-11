@@ -29,6 +29,7 @@ def fit_mixture(probs, gaussian_mean, gaussian_var, cutoff):
     norm_discrete_sum = sum([norm_fitted.pdf(i) for i in range(cutoff, 89)])
     geom_discrete_sum = sum([((1 - p) ** i) * p for i in range(0, cutoff)])
     geom_scale = 1 / geom_discrete_sum
+    norm_scale = 1 / norm_discrete_sum
 
     print("gauss sum:", norm_discrete_sum)
     print("geom sum:", geom_discrete_sum)
@@ -37,6 +38,6 @@ def fit_mixture(probs, gaussian_mean, gaussian_var, cutoff):
         if i < cutoff:
             output.append(a * geom_scale * ((1 - p) ** i) * p)
         else:
-            output.append((1 - a) * norm_fitted.pdf(i))
+            output.append((1 - a) * norm_scale * norm_fitted.pdf(i))
 
     return output
