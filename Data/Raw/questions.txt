@@ -1,0 +1,12 @@
+does winning early make people stop sooner
+
+2 people
+1 stopping at 5; 1 stopping at 10
+would person who won early have a higher WTP to play?
+
+Take two people at the same time statistically, but 
+
+Try to write down a formal model.
+
+Distinguish the last price from a quit
+	- plot the distribution of play lengths that dont end in a prize
